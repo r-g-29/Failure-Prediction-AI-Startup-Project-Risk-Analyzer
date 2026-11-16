@@ -30,12 +30,12 @@ header h1 { margin: 0; }
 }
 
 button { font: inherit; cursor: pointer; }
-button.primary { width: 100%; padding: 10px; border: 0; border-radius: 8px; background: #dc2626; color: #fff; }
+button.primary { width: 100%; padding: 10px; border: 0; border-radius: 8px; background: #dd0e0e; color: #fff; }
 button:disabled { opacity: .6; cursor: not-allowed; }
 .card > button:not(.primary) { margin-top: 12px; padding: 8px 14px; border: 1px solid #d1d5db; background: #fff; border-radius: 8px; }
 
-.error { color: #b91c1c; font-size: 13px; }
-.alert { background: #fee2e2; color: #991b1b; padding: 10px 14px; border-radius: 8px; margin-bottom: 8px; }
+.error { color: #c41010; font-size: 13px; }
+.alert { background: #fee2e2; color: #900808; padding: 10px 14px; border-radius: 8px; margin-bottom: 8px; }
 
 .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 16px; }
 .metric { border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px; display: flex; flex-direction: column; }
