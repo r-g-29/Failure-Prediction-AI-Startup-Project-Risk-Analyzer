@@ -15,7 +15,10 @@ export default function App() {
 
   const refreshList = async () => {
     try { setProjects(await listProjects()); }
-    catch (e) { setError(`Could not load projects: ${e.message}`); }
+    catch (e) {setError("Oops! something went wrong") ; 
+      console.log(`Could not load projects: ${e.message}`)
+    }
+    
   };
 
   useEffect(() => { refreshList(); }, []);
