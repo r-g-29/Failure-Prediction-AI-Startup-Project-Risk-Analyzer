@@ -21,8 +21,7 @@ export default function App() {
   const [results, setResults] = useState(null);     
   const [resultsLoading, setResultsLoading] = useState(false);
   const [busy, setBusy] = useState(false);          
-  const [evalBusy, setEvalBusy] = useState(false);
-  const [online, setOnline] = useState(null);       
+  const [evalBusy, setEvalBusy] = useState(false);      
   const [error, setError] = useState("");
 
   const refreshList = async () => {
@@ -148,10 +147,7 @@ export default function App() {
           <h1>Failure Prediction AI</h1>
           <p className="muted">Startup & Project Risk Analyzer </p>
         </div>
-        <span className="health" title={online === false ? "Backend not reachable" : "Backend status"}>
-          <i className={`dot ${online === null ? "" : online ? "up" : "down"}`} />
-          {online === null ? "Checking..." : online ? "API online" : "API offline"}
-        </span>
+       
       </header>
 
       {error && (
