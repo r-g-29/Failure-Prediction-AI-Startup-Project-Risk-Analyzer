@@ -12,7 +12,7 @@ export default function MarketAnalysis({ project, onReanalyze, busy }) {
     );
   }
 
-  // the market data may sit at the top level of the result or under "market"
+ 
   const a = project.analysis;
   const m = a?.market ?? a;
   const hasMarket = m && (m.tam || m.sam || m.som || m.summary || m.trends);

@@ -45,7 +45,7 @@ export default function ProjectForm({ onSubmit, busy }) {
 
       <div className="row">
         <label>Your Name
-          <input name="name" value={form.name} onChange={set} placeholder="e.g., Sumeeth" />
+          <input name="name" value={form.name} onChange={set} placeholder="e.g., Name" />
         </label>
         <label>Email
           <input name="email" type="email" value={form.email} onChange={set} placeholder="you@example.com" />

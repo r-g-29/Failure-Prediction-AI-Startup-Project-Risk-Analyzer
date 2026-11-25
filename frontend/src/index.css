@@ -53,3 +53,100 @@ button:disabled { opacity: .6; cursor: not-allowed; }
 .list-item { display: block; width: 100%; text-align: left; padding: 8px; margin-bottom: 6px;
   border: 1px solid #e5e7eb; border-radius: 6px; background: #fff; }
 .list-item.active { border-color: #dc2626; background: #fef2f2; }
+
+/* ================= Milestone 2 additions ================= */
+
+/* header + backend status */
+.top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.health { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: #6b7280; margin-top: 6px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: #9ca3af; display: inline-block; }
+.dot.up { background: #16a34a; }
+.dot.down { background: #dc2626; }
+.alert { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+
+/* sidebar */
+.search { width: 100%; padding: 7px 8px; margin-bottom: 8px; border: 1px solid #d1d5db; border-radius: 6px; font: inherit; }
+.list-row { margin-bottom: 8px; }
+.list-row .list-item { margin-bottom: 4px; }
+.row-actions { display: flex; gap: 6px; }
+.mini { padding: 2px 8px; font-size: 12px; border: 1px solid #d1d5db; background: #fff; border-radius: 6px; }
+.mini.danger { color: #b91c1c; border-color: #fecaca; }
+.mini.danger:hover { background: #fef2f2; }
+
+/* project form */
+.small { font-size: 12px; margin: 0 0 8px; }
+.link-btn { display: block; margin: 10px auto 0; border: 0; background: none; color: #6b7280; text-decoration: underline; }
+
+/* Risk Assessment tab */
+.layout-risk { display: grid; grid-template-columns: 200px 1fr; gap: 16px; align-items: start; }
+@media (max-width: 900px) { .layout-risk { grid-template-columns: 1fr; } }
+.stack { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.risk-layout { display: grid; grid-template-columns: 320px 1fr 300px; gap: 16px; align-items: start; }
+@media (max-width: 1100px) { .risk-layout { grid-template-columns: 1fr; } }
+
+.editor { width: 100%; min-height: 280px; padding: 10px; border: 1px solid #d1d5db; border-radius: 8px;
+  font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12.5px; line-height: 1.5; resize: vertical; }
+.checks { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 10px; }
+.check { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+.btn-row { display: flex; gap: 10px; align-items: center; margin-top: 12px; }
+.btn-row .primary { width: auto; padding: 10px 20px; }
+.rerun { padding: 8px 14px; border: 1px solid #d1d5db; background: #fff; border-radius: 8px; }
+.between { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+
+.score-box { text-align: center; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px; margin-bottom: 14px;
+  display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.big-score { font-size: 56px; font-weight: 700; line-height: 1; }
+.big-score.high, .level.high { color: #dc2626; }
+.big-score.medium, .level.medium { color: #d97706; }
+.big-score.low, .level.low { color: #16a34a; }
+.level { font-size: 12px; letter-spacing: .05em; }
+
+.success-box { border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px; margin-bottom: 14px; }
+.bar { height: 6px; border-radius: 999px; background: #e5e7eb; overflow: hidden; margin: 6px 0; }
+.bar-fill { height: 100%; border-radius: 999px; }
+.bar-fill.high { background: #dc2626; }
+.bar-fill.medium { background: #f59e0b; }
+.bar-fill.low { background: #16a34a; }
+
+.factor { border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px; margin-bottom: 8px; display: flex; flex-direction: column; }
+.card h3 { font-size: 14px; margin: 12px 0 8px; }
+
+.swot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.swot { border-radius: 10px; padding: 12px; min-height: 150px; }
+.swot h4 { margin: 0 0 8px; }
+.swot ul { margin: 0; padding-left: 18px; font-size: 13px; }
+.swot li { margin-bottom: 4px; }
+.swot.strengths { background: #ecfdf5; } .swot.strengths h4 { color: #15803d; }
+.swot.weaknesses { background: #fef2f2; } .swot.weaknesses h4 { color: #b91c1c; }
+.swot.opportunities { background: #eff6ff; } .swot.opportunities h4 { color: #1d4ed8; }
+.swot.threats { background: #fffbeb; } .swot.threats h4 { color: #b45309; }
+
+.raw { margin-top: 10px; font-size: 13px; }
+.raw pre { max-height: 240px; overflow: auto; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px; font-size: 12px;
+ }
+ /* ================= Evaluation form ================= */
+
+/* inputs generated from the API schema */
+.sf-group { border: 1px solid #e5e7eb; border-radius: 10px; padding: 10px 12px 4px; margin: 0 0 12px; min-width: 0; }
+.sf-group legend { padding: 0 6px; font-weight: 600; font-size: 14px; }
+.sf-field { display: flex; flex-direction: column; gap: 4px; font-size: 13px; margin-bottom: 10px; }
+.sf-field input[type="text"], .sf-field input[type="number"], .sf-field select, .sf-field textarea,
+.sf-map-row input[type="text"], .sf-map-row input[type="number"], .sf-map-row select {
+  width: 100%; min-width: 0; padding: 7px 8px; border: 1px solid #d1d5db; border-radius: 6px; font: inherit; }
+.sf-field .req { color: #dc2626; font-style: normal; }
+.sf-range { display: flex; align-items: center; gap: 10px; }
+.sf-range input[type="range"] { flex: 1; accent-color: #dc2626; }
+.sf-range output { min-width: 32px; text-align: right; font-weight: 600; }
+.sf-bool { margin: 4px 0 12px; }
+.sf-array-item { border: 1px dashed #d1d5db; border-radius: 8px; padding: 10px; margin-bottom: 10px; }
+.sf-map-row { display: grid; grid-template-columns: 1fr 1.2fr auto; gap: 8px; align-items: center; margin-bottom: 8px; }
+.sf-adv { margin: 8px 0 12px; font-size: 13px; }
+.sf-adv summary { cursor: pointer; color: #6b7280; margin-bottom: 8px; }
+.sf-json { min-height: 80px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12.5px; }
+.add-btn { margin: 0 0 10px; }
+
+/* shared buttons (skip any rule you already have) */
+.btn-row { display: flex; gap: 10px; align-items: center; margin-top: 12px; }
+.btn-row .primary { width: auto; padding: 10px 20px; }
+.check { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+.rerun { padding: 8px 14px; border: 1px solid #d1d5db; background: #fff; border-radius: 8px; }
