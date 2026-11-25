@@ -1,4 +1,29 @@
-venv
+# Python virtual environment
+venv/
+.venv/
+
+# Environment variables and secrets
 .env
+.env.*
+
+# Database files
 db.sql
-__pycache__
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Pytest cache
+.pytest_cache/
+
+# IDE settings
+.vscode/
+
+# Log files
+*.log
+
+# Local testing files - do not push
+test_feasibility_evaluator.py
+test_project_evaluator.py
+test_risk_calculator.py
+test_swot_analyzer.py
